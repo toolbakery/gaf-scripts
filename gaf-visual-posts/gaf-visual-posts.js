@@ -75,8 +75,8 @@ function highlight(elements, definitions) {
 }
 
 function highlight_categories() {
-    highlight(document.getElementsByClassName('postbit-details-username'), self.categories.poster);
-    highlight(document.getElementsByClassName('post'), self.categories.posts);
+    highlight(document.getElementsByClassName('postbit-details-username'), categories.poster);
+    highlight(document.getElementsByClassName('post'), categories.posts);
 }
 
 (function() {
