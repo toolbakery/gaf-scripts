@@ -22,20 +22,20 @@ var categories = {
     posts: [{
         name: 'anime',
         keywords: ['anime', 'jojo', 'naruto', 'gintama'],
-        color: 'blue',
+        color: '#c0b9cc',
     }, {
         name: 'wrestling',
         keywords: ['wrestling', 'hogan', 'cena', 'new day', 'xavier', 'McMahon'],
-        color: 'green',
+        color: '#b9ccc0',
     }, {
         name: 'Max Payne',
         keywords: ['payne', 'MP3'],
-        color: 'red',
+        color: '#ccb9c4',
     }, ],
     poster: [{
         name: 'GB Staff',
         keywords: ['rudds', 'bionicpuppy', 'wreckthelaw', 'monsterdunk', 'danryckert'],
-        color: 'yellow',
+        color: '#ed8d6d',
     }, ]
 };
 
@@ -52,6 +52,7 @@ function modifyElement(elem, category) {
         elem.insertBefore(catNameSpan, elem.firstChild);
     }
     // rather add category name as class and define global css with the desired properties
+    // this would also solve background-color of nested class='quote'
     elem.style.backgroundColor = category.color;
     if (String(catNameSpan.innerHTML).indexOf(descriptiveText) == -1) {
         catNameSpan.appendChild(document.createTextNode(descriptiveText));
